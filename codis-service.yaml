@@ -36,7 +36,9 @@ spec:
     - port: 11080
       name: proxy
     - port: 19000
+      nodePort: 36379
       name: admin
+  type: NodePort
   selector:
     app: codis-proxy
 ---
