@@ -16,14 +16,14 @@ case "$1" in
 cleanup)
     kubectl delete -f .
     # 如果zookeeper不是在kurbernetes上，需要登陆上zk机器 执行 zkCli.sh -server {zk-addr}:2181 rmr /codis3/$product_name
-    #kubectl exec -it zk-0 -- zkCli.sh -server zk-0:2181 rmr /codis3/$product_name
+    kubectl exec -it zk-0 -- zkCli.sh -server zk-0:2181 rmr /codis3/$product_name
     ;;
 
 ### 创建新的codis集群
 buildup)
     kubectl delete -f .
     # 如果zookeeper不是在kurbernetes上，需要登陆上zk机器 执行 zkCli.sh -server {zk-addr}:2181 rmr /codis3/$product_name
-    #kubectl exec -it zk-0 -- zkCli.sh -server zk-0:2181 rmr /codis3/$product_name
+    kubectl exec -it zk-0 -- zkCli.sh -server zk-0:2181 rmr /codis3/$product_name
     kubectl create -f codis-service.yaml
     kubectl create -f codis-dashboard.yaml
     while [ $(kubectl get pods -l app=codis-dashboard |grep Running |wc -l) != 1 ]; do sleep 1; done;
