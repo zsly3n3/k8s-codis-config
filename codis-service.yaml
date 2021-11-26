@@ -36,7 +36,7 @@ spec:
     - port: 11080
       name: proxy
     - port: 19000
-      nodePort: 36379
+      nodePort: 30679
       name: admin
   type: NodePort
   selector:
