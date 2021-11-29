@@ -79,15 +79,3 @@ spec:
           requests:
             cpu: "0.1"
             memory: 0.1Gi
-  volumeClaimTemplates:
-    - metadata:
-        name: data
-        annotations:
-          volume.beta.kubernetes.io/storage-class: "paopao-redis"
-          gcp-auto-backup: "yes"
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: 20Gi
-
