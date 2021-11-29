@@ -64,9 +64,9 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        volumeMounts:
-        - name: data
-          mountPath: /codis
+        #volumeMounts:
+        #- name: data
+        #  mountPath: /codis
           # - name: redis-config
           # mountPath: /gopath/src/github.com/CodisLabs/codis/config/
         ports:
