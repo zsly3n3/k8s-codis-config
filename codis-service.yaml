@@ -59,11 +59,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: codis-ha
-  name: codis-ha
+    app: codis-sentinel
+  name: codis-sentinel
 spec:
   clusterIP: None
   ports:
-    - port: 12345
+    - port: 26379
   selector:
-    app: codis-ha
+    app: codis-sentinel
