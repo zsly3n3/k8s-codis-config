@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: codis-proxy
 spec:
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
