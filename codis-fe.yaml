@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: codis-fe
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
