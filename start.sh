@@ -32,7 +32,7 @@ buildup)
     servers=$(grep "replicas" codis-server.yaml |awk  '{print $2}')
     while [ $(kubectl get pods -l app=codis-server |grep Running |wc -l) != $servers ]; do sleep 1; done;
     kubectl exec -it codis-server-0 -- codis-admin  --dashboard=codis-dashboard:18080 --rebalance --confirm
-    kubectl create -f codis-sentinel.yaml
+    kubectl create -f codis-ha.yaml
     kubectl create -f codis-fe.yaml
     sleep 60
     kubectl exec -it codis-dashboard-0 -- redis-cli -h codis-proxy -p 19000 PING
