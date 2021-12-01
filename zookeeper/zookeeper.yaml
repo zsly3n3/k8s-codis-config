@@ -28,7 +28,7 @@ metadata:
   name: zk
 spec:
   serviceName: zookeeper
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
