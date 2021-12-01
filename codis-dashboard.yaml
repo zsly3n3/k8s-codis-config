@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: codis-dashboard
 spec:
-  replicas: 5
+  replicas: 1
   serviceName: codis-dashboard
   template:
     metadata:
