@@ -3,13 +3,13 @@ kind: ConfigMap
 metadata:
   name: zk-config
 data:
-  ensemble: "zk-0;zk-1;zk-2;zk-3;zk-4"
+  ensemble: "zk-0;zk-1;zk-2"
   jvm.heap: "2G"
   tick: "2000"
   init: "10"
   sync: "5"
   client.cnxns: "60"
-  snap.retain: "5"
+  snap.retain: "3"
   purge.interval: "1"
 ---
 apiVersion: policy/v1beta1

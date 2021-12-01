@@ -4,7 +4,7 @@ metadata:
   name: codis-server
 spec:
   serviceName: codis-server
-  replicas: 10
+  replicas: 4
   template:
     metadata:
       labels:
