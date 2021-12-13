@@ -124,13 +124,13 @@ spec:
           exec:
             command:
             - "zkOk.sh"
-          initialDelaySeconds: 10
+          initialDelaySeconds: 15
           timeoutSeconds: 5
         livenessProbe:
           exec:
             command:
             - "zkOk.sh"
-          initialDelaySeconds: 10
+          initialDelaySeconds: 15
           timeoutSeconds: 5
 #        volumeMounts:
 #        - name: datadir
