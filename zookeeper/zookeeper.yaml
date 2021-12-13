@@ -123,17 +123,13 @@ spec:
         readinessProbe:
           exec:
             command:
-              - sh
-              - -c
-              - "zookeeper-ready 2181"
+            - "zkOk.sh"
           initialDelaySeconds: 10
           timeoutSeconds: 5
         livenessProbe:
           exec:
             command:
-              - sh
-              - -c
-              - "zookeeper-ready 2181"
+            - "zkOk.sh"
           initialDelaySeconds: 10
           timeoutSeconds: 5
 #        volumeMounts:
