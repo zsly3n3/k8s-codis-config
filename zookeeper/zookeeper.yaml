@@ -123,14 +123,18 @@ spec:
         readinessProbe:
           exec:
             command:
-            - "zkOk.sh"
-          initialDelaySeconds: 15
+              - sh
+              - -c
+              - "zookeeper-ready 2181"
+          initialDelaySeconds: 10
           timeoutSeconds: 5
         livenessProbe:
           exec:
             command:
-            - "zkOk.sh"
-          initialDelaySeconds: 15
+              - sh
+              - -c
+              - "zookeeper-ready 2181"
+          initialDelaySeconds: 10
           timeoutSeconds: 5
 #        volumeMounts:
 #        - name: datadir
